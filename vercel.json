@@ -1,0 +1,16 @@
+{
+  "headers": [
+    {
+      "source": "/frontend/(.*\\.js)",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript" }
+      ]
+    },
+    {
+      "source": "/frontend/(.*\\.css)",
+      "headers": [
+        { "key": "Content-Type", "value": "text/css" }
+      ]
+    }
+  ]
+}
