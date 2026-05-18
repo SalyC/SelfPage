@@ -151,3 +151,37 @@
 }
 
 @keyframes blink { 50% { opacity: 0; } }
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 6rem;
+    gap: 2rem;
+  }
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+  }
+  .hero-right {
+    flex: auto;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .hero-stats {
+    gap: 1.5rem;
+  }
+  .stat-num {
+    font-size: 1.5rem;
+  }
+  .terminal-body pre {
+    font-size: 11px;
+  }
+}

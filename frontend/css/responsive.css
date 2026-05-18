@@ -1,0 +1,95 @@
+/* Адаптивность для всех секций */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 6rem;
+    gap: 2rem;
+  }
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+  }
+  .hero-right {
+    flex: auto;
+    width: 100%;
+  }
+  section {
+    padding: 4rem 1.5rem;
+  }
+  .section-title {
+    margin-bottom: 2rem;
+  }
+  .chat-suggestions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-stats {
+    gap: 1.5rem;
+  }
+  .stat-num {
+    font-size: 1.5rem;
+  }
+  .terminal-body pre {
+    font-size: 11px;
+  }
+  .msg {
+    max-width: 95%;
+  }
+  .chat-body {
+    padding: 1rem;
+  }
+  .chat-footer {
+    padding: 0.75rem;
+    gap: 6px;
+  }
+  .chat-input {
+    font-size: 13px;
+  }
+  .chat-suggestions {
+    padding: 0.5rem 1rem;
+    gap: 6px;
+  }
+  .suggestion-btn {
+    font-size: 11px;
+    padding: 0.25rem 0.6rem;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0.75rem 1rem;
+  }
+  .nav-logo {
+    font-size: 11px;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero-desc {
+    font-size: 1rem;
+  }
+  .btn-primary, .btn-secondary {
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+  }
+}

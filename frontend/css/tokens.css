@@ -118,3 +118,12 @@ section {
   border-color: var(--accent);
   background:   var(--accent-dim2);
 }
+
+@media (max-width: 900px) {
+  section {
+    padding: 4rem 1.5rem;
+  }
+  .section-title {
+    margin-bottom: 2rem;
+  }
+}

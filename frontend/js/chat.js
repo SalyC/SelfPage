@@ -25,7 +25,6 @@ try {
   askClaude = async (userMessage, systemPrompt) => {
     await new Promise(resolve => setTimeout(resolve, 600));
     const msg = userMessage.toLowerCase();
-    
     if (msg.includes('опыт') || msg.includes('лет')) {
       return `У меня ${profile.experience}+ года опыта во фронтенде. Работал в командах от 4 до 7 человек.`;
     }
@@ -98,8 +97,8 @@ export function sendSuggestion(btn) {
 }
 
 function appendMsg(text, role) {
-  const msg = document.createElement('div');
-  msg.className = `msg ${role}`;
+  const msgDiv = document.createElement('div');
+  msgDiv.className = `msg ${role}`;
 
   const ava = document.createElement('div');
   ava.className = 'msg-ava';
@@ -109,8 +108,28 @@ function appendMsg(text, role) {
   bubble.className = 'msg-bubble';
   bubble.textContent = text;
 
-  msg.append(ava, bubble);
-  chatBody.appendChild(msg);
+  if (role === 'error') {
+    bubble.style.borderColor = '#FF5F5F';
+    bubble.style.background = 'rgba(255, 95, 95, 0.1)';
+    const retryBtn = document.createElement('button');
+    retryBtn.textContent = '↻ Отправить снова';
+    retryBtn.className = 'retry-btn';
+    retryBtn.style.marginTop = '8px';
+    retryBtn.style.background = 'transparent';
+    retryBtn.style.border = '1px solid var(--accent)';
+    retryBtn.style.color = 'var(--accent)';
+    retryBtn.style.padding = '4px 12px';
+    retryBtn.style.borderRadius = '20px';
+    retryBtn.style.cursor = 'pointer';
+    retryBtn.onclick = () => {
+      msgDiv.remove();
+      sendMessage();
+    };
+    bubble.appendChild(retryBtn);
+  }
+
+  msgDiv.append(ava, bubble);
+  chatBody.appendChild(msgDiv);
   chatBody.scrollTop = chatBody.scrollHeight;
 }
 
@@ -161,7 +180,7 @@ export async function sendMessage() {
   } catch (err) {
     console.error(err);
     removeTyping();
-    appendMsg('Ошибка соединения. Попробуйте ещё раз.', 'bot');
+    appendMsg('Ошибка соединения. Попробуйте ещё раз.', 'error');
   } finally {
     isLoading = false;
     sendBtn.disabled = false;
