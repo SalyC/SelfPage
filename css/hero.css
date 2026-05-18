@@ -1,0 +1,153 @@
+/* ─── Hero Section ────────────────────────────────────────────────────── */
+
+.hero {
+  min-height: 100vh;
+  display:    flex;
+  align-items: center;
+  padding:    8rem 2rem 4rem;
+  max-width:  1200px;
+  margin:     0 auto;
+  gap:        4rem;
+}
+
+.hero-left  { flex: 1; }
+.hero-right { flex: 0 0 380px; }
+
+/* Badge */
+.hero-badge {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            6px;
+  background:     var(--accent-dim2);
+  border:         1px solid rgba(200, 240, 74, 0.2);
+  padding:        0.3rem 0.8rem;
+  border-radius:  100px;
+  font-family:    var(--mono);
+  font-size:      11px;
+  color:          var(--accent);
+  margin-bottom:  1.5rem;
+  letter-spacing: 0.06em;
+}
+
+.badge-dot {
+  width:         6px;
+  height:        6px;
+  border-radius: 50%;
+  background:    var(--accent);
+  animation:     pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.7); }
+}
+
+/* Heading */
+.hero h1 {
+  font-family:    var(--serif);
+  font-size:      clamp(3rem, 6vw, 5.5rem);
+  line-height:    1.05;
+  letter-spacing: -0.01em;
+  margin-bottom:  1.5rem;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color:      var(--accent);
+}
+
+/* Body text */
+.hero-desc {
+  font-size:     1.1rem;
+  color:         var(--muted);
+  max-width:     520px;
+  line-height:   1.7;
+  margin-bottom: 2.5rem;
+}
+
+/* CTA row */
+.hero-actions {
+  display:   flex;
+  gap:       1rem;
+  flex-wrap: wrap;
+}
+
+/* Stats strip */
+.hero-stats {
+  display:       flex;
+  gap:           2.5rem;
+  margin-top:    3rem;
+  padding-top:   2.5rem;
+  border-top:    1px solid var(--border);
+}
+
+.stat-num {
+  font-family: var(--mono);
+  font-size:   2rem;
+  font-weight: 500;
+  color:       var(--accent);
+  display:     block;
+}
+
+.stat-label {
+  font-size:      12px;
+  color:          var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Terminal card */
+.terminal-card {
+  background:    var(--surface);
+  border:        1px solid var(--border);
+  border-radius: 12px;
+  overflow:      hidden;
+  font-family:   var(--mono);
+  font-size:     13px;
+}
+
+.terminal-bar {
+  background:    var(--surface2);
+  padding:       0.6rem 1rem;
+  display:       flex;
+  align-items:   center;
+  gap:           6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dot   { width: 10px; height: 10px; border-radius: 50%; }
+.dot-r { background: #FF5F5F; }
+.dot-y { background: #FFBD2E; }
+.dot-g { background: #28C840;  }
+
+.terminal-title {
+  flex:       1;
+  text-align: center;
+  font-size:  11px;
+  color:      var(--muted);
+}
+
+.terminal-body {
+  padding:     1.25rem;
+  line-height: 1.8;
+}
+
+/* Syntax highlight classes */
+.t-prompt { color: var(--accent); }
+.t-cmd    { color: var(--text);   }
+.t-out    { color: var(--muted);  }
+.t-string { color: #98E4A5;       }
+.t-num    { color: #FFB86C;       }
+.t-key    { color: var(--blue);   }
+
+.t-cursor {
+  display:        inline-block;
+  width:          8px;
+  height:         14px;
+  background:     var(--accent);
+  animation:      blink 1s step-end infinite;
+  vertical-align: middle;
+  margin-left:    2px;
+}
+
+@keyframes blink { 50% { opacity: 0; } }

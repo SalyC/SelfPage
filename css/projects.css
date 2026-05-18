@@ -1,0 +1,83 @@
+/* ─── Projects Section ────────────────────────────────────────────────── */
+
+.projects-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap:                   1.5rem;
+}
+
+.project-card {
+  background:    var(--surface);
+  border:        1px solid var(--border);
+  border-radius: 12px;
+  padding:       1.75rem;
+  position:      relative;
+  overflow:      hidden;
+  cursor:        pointer;
+  transition:    border-color 0.2s, transform 0.2s;
+}
+
+/* Accent top-border that animates in on hover */
+.project-card::before {
+  content:          '';
+  position:         absolute;
+  top: 0; left: 0; right: 0;
+  height:           2px;
+  background:       var(--accent);
+  transform:        scaleX(0);
+  transform-origin: left;
+  transition:       transform 0.3s;
+}
+
+.project-card:hover              { border-color: var(--border2); transform: translateY(-2px); }
+.project-card:hover::before      { transform: scaleX(1); }
+
+.project-num {
+  font-family:   var(--mono);
+  font-size:     11px;
+  color:         var(--muted);
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  font-size:     1.1rem;
+  font-weight:   600;
+  margin-bottom: 0.5rem;
+}
+
+.project-desc {
+  font-size:     14px;
+  color:         var(--muted);
+  line-height:   1.6;
+  margin-bottom: 1.25rem;
+}
+
+.project-stack {
+  display:       flex;
+  flex-wrap:     wrap;
+  gap:           5px;
+  margin-bottom: 1.25rem;
+}
+
+.stack-tag {
+  background:    var(--surface2);
+  border:        1px solid var(--border);
+  color:         var(--muted);
+  font-family:   var(--mono);
+  font-size:     10px;
+  padding:       2px 8px;
+  border-radius: 3px;
+}
+
+.project-link {
+  color:           var(--accent);
+  font-family:     var(--mono);
+  font-size:       12px;
+  text-decoration: none;
+  display:         inline-flex;
+  align-items:     center;
+  gap:             4px;
+  transition:      gap 0.2s;
+}
+
+.project-link:hover { gap: 8px; }

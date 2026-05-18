@@ -1,0 +1,47 @@
+/* ─── Navigation ──────────────────────────────────────────────────────── */
+
+nav {
+  position:        fixed;
+  top: 0; left: 0; right: 0;
+  z-index:         100;
+  padding:         1.25rem 2rem;
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  border-bottom:   1px solid var(--border);
+  backdrop-filter: blur(16px);
+  background:      rgba(12, 12, 14, 0.8);
+}
+
+.nav-logo {
+  font-family:    var(--mono);
+  font-size:      13px;
+  color:          var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  display:    flex;
+  gap:        2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color:          var(--muted);
+  text-decoration: none;
+  font-size:      13px;
+  font-weight:    500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition:     color 0.2s;
+}
+
+.nav-links a:hover { color: var(--text); }
+
+.nav-cta {
+  background:   var(--accent);
+  color:        var(--bg) !important;
+  padding:      0.4rem 1rem;
+  border-radius: 4px;
+  font-weight:  600 !important;
+}

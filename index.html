@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alexander Astapov — Frontend Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="css/tokens.css"/>
+  <link rel="stylesheet" href="css/nav.css"/>
+  <link rel="stylesheet" href="css/hero.css"/>
+  <link rel="stylesheet" href="css/skills.css"/>
+  <link rel="stylesheet" href="css/projects.css"/>
+  <link rel="stylesheet" href="css/chat.css"/>
+  <link rel="stylesheet" href="css/footer.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">AP_DEV</div>
+  <ul class="nav-links">
+    <li><a href="#skills">Стек</a></li>
+    <li><a href="#projects">Проекты</a></li>
+    <li><a href="#chat-section">Спросить AI</a></li>
+    <li><a href="mailto:gmontherakbot@gmail.com" class="nav-cta">Написать</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Доступен для проектов · Омск / Remote
+    </div>
+
+    <h1>Александр<br>Астапов — <em>Frontend<br>Developer</em></h1>
+
+    <p class="hero-desc">
+      Пишу быстрые, хорошо организованные интерфейсы на React и TypeScript.
+      Умею работать с REST API и AI-инструментами, строю архитектуру,
+      которую не стыдно показать на код-ревью.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">Смотреть проекты</a>
+      <a href="#chat-section" class="btn-secondary">Спросить AI-версию</a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">1+</span>
+        <span class="stat-label">года опыта</span>
+      </div>
+      <div>
+        <span class="stat-num">3+</span>
+        <span class="stat-label">проектов</span>
+      </div>
+      <div>
+        <span class="stat-num">3+</span>
+        <span class="stat-label">компаний-клиентов</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="terminal-card">
+      <div class="terminal-bar">
+        <div class="dot dot-r"></div>
+        <div class="dot dot-y"></div>
+        <div class="dot dot-g"></div>
+        <span class="terminal-title">astapov.config.ts</span>
+      </div>
+      <div class="terminal-body">
+<pre><span class="t-key">const</span> <span class="t-cmd">developer</span> = {
+  <span class="t-key">name</span>:       <span class="t-string">"Александр Астапов"</span>,
+  <span class="t-key">role</span>:       <span class="t-string">"Frontend Developer"</span>,
+  <span class="t-key">location</span>:   <span class="t-string">"Омск / Remote"</span>,
+  <span class="t-key">experience</span>: <span class="t-num">1</span>,
+
+  <span class="t-key">stack</span>: [
+    <span class="t-string">"React"</span>, <span class="t-string">"TypeScript"</span>,
+    <span class="t-string">"Next.js"</span>, <span class="t-string">"Node.js"</span>,
+    <span class="t-string">"Tailwind"</span>, <span class="t-string">"RestAPI"</span>
+  ],
+
+  <span class="t-key">openToWork</span>: <span class="t-string">true</span>,
+} <span class="t-out">// satisfies Developer</span>
+
+<span class="t-prompt">❯</span> <span class="t-cmd">npm run hire</span> <span class="t-cursor"></span></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="skills">
+  <div class="section-label">// 01. стек технологий</div>
+  <h2 class="section-title">Чем я работаю каждый день</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <span class="skill-icon">⚛️</span>
+      <div class="skill-name">Frontend Core</div>
+      <p class="skill-desc">React как основной инструмент UI. TypeScript для надёжности. State management через Redux.</p>
+      <div class="skill-tags">
+        <span class="tag">React 18</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Redux</span>
+        <span class="tag">React Query</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-icon">🚀</span>
+      <div class="skill-name">Фреймворки</div>
+      <p class="skill-desc">SSR, SSG и RSC с Next.js. Remix для data-heavy приложений. Vite как сборщик по умолчанию.</p>
+      <div class="skill-tags">
+        <span class="tag">Next.js 14</span>
+        <span class="tag">Remix</span>
+        <span class="tag">Vite</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-icon">🎨</span>
+      <div class="skill-name">Стилизация</div>
+      <p class="skill-desc">Tailwind для скорости, CSS Modules для изоляции, Framer Motion для анимаций.</p>
+      <div class="skill-tags">
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">CSS Modules</span>
+        <span class="tag">Framer Motion</span>
+        <span class="tag">Radix UI</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-icon">🔌</span>
+      <div class="skill-name">API & Backend</div>
+      <p class="skill-desc">REST API на клиенте. Node.js + Express для BFF. Prisma как ORM.</p>
+      <div class="skill-tags">
+        <span class="tag">REST</span>
+        <span class="tag">RestAPI</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Prisma</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-icon">🤖</span>
+      <div class="skill-name">AI-инструменты</div>
+      <p class="skill-desc">Интеграция LLM-API в продукты. Автоматизация рутины через AI.</p>
+      <div class="skill-tags">
+        <span class="tag">Anthropic API</span>
+        <span class="tag">OpenAI</span>
+        <span class="tag">Cursor</span>
+        <span class="tag">LangChain</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-icon">🛠️</span>
+      <div class="skill-name">DevOps & Тесты</div>
+      <p class="skill-desc">CI/CD через GitHub Actions. Jest и Playwright для покрытия. Docker для окружений.</p>
+      <div class="skill-tags">
+        <span class="tag">Jest</span>
+        <span class="tag">Playwright</span>
+        <span class="tag">Docker</span>
+        <span class="tag">GitHub Actions</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-label">// 02. избранные проекты</div>
+  <h2 class="section-title">Что я построил</h2>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-num">001 · 2025</div>
+      <div class="project-title">Wizard Webcopy — анализ сайта конкурента</div>
+      <p class="project-desc">Анализ сайта конкурента, парсинг и визуализация данных. Основной разработчик в команде из 4 человек.</p>
+      <div class="project-stack">
+        <span class="stack-tag">React</span>
+        <span class="stack-tag">Next.js</span>
+        <span class="stack-tag">Node.js</span>
+        <span class="stack-tag">TypeScript</span>
+        <span class="stack-tag">HTML/CSS/JS</span>
+      </div>
+      <a href="#" class="project-link">Открыть проект →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">002 · 2025</div>
+      <div class="project-title">Asana — сайт фестиваля</div>
+      <p class="project-desc">Сайт фестиваля с интерактивной картой и расписанием. Разработчик в команде из 7 человек.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Next.js</span>
+        <span class="stack-tag">TypeScript</span>
+        <span class="stack-tag">HTML/CSS/JS</span>
+      </div>
+      <a href="#" class="project-link">Открыть проект →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">003 · 2025</div>
+      <div class="project-title">OneWizard — разработка сайтов и автоматизация заявок</div>
+      <p class="project-desc">Разработка сайтов под ключ и автоматизация заявок через CRM. Разработчик в команде из 7 человек.</p>
+      <div class="project-stack">
+        <span class="stack-tag">React</span>
+        <span class="stack-tag">Next.js</span>
+        <span class="stack-tag">TypeScript</span>
+        <span class="stack-tag">Node.js</span>
+        <span class="stack-tag">HTML/CSS/JS</span>
+      </div>
+      <a href="#" class="project-link">Открыть проект →</a>
+    </div>
+  </div>
+</section>
+
+<section id="chat-section">
+  <div class="section-label">// 03. AI-версия меня</div>
+  <h2 class="section-title">Задайте любой вопрос</h2>
+
+  <div class="chat-wrapper">
+    <div class="chat-header">
+      <div class="chat-avatar">АП</div>
+      <div>
+        <div class="chat-name">AI-ассистент Александра</div>
+        <div class="chat-sub">Отвечает на вопросы об опыте, стеке и подходах</div>
+      </div>
+      <div class="online-dot"></div>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+      <div class="msg bot">
+        <div class="msg-ava">АП</div>
+        <div class="msg-bubble">
+          Привет! Я AI-ассистент, созданный на основе профиля Александра. Могу рассказать о его опыте, проектах, подходах к разработке или о том, почему он может быть полезен в вашей команде. Спрашивайте!
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-suggestions" id="suggestions">
+      <button class="suggestion-btn" onclick="sendSuggestion(this)">Какой у тебя опыт?</button>
+      <button class="suggestion-btn" onclick="sendSuggestion(this)">Расскажи о последнем проекте</button>
+      <button class="suggestion-btn" onclick="sendSuggestion(this)">Как ты работаешь с AI?</button>
+      <button class="suggestion-btn" onclick="sendSuggestion(this)">Твой подход к коду?</button>
+    </div>
+
+    <div class="chat-footer">
+      <textarea
+        class="chat-input"
+        id="chatInput"
+        placeholder="Напишите вопрос..."
+        rows="1"
+        onkeydown="handleKey(event)"
+        oninput="autoResize(this)"
+      ></textarea>
+      <button class="send-btn" id="sendBtn" onclick="sendMessage()" aria-label="Отправить">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0C0C0E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">© 2026 Александр · Сделано с ♥ и TypeScript</div>
+  <div class="footer-links">
+    <a href="https://github.com" target="_blank" rel="https://github.com/SalyC">GitHub</a>
+    <a href="https://t.me" target="_blank" rel="https://t.me/GM_on_the_Rakbot">Telegram</a>
+    <a href="mailto:gmontherakbot@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script type="module" src="js/chat.js"></script>
+
+</body>
+</html>
